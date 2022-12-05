@@ -2,6 +2,7 @@ module lab01 {
     requires transitive javafx.controls;
     requires javafx.fxml;
     requires javafx.base;
-    opens lab to javafx.fxml;
-    exports lab;
+    requires java.sql;
+    opens App to javafx.fxml;
+    exports App;
 }

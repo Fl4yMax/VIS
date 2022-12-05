@@ -1,9 +1,8 @@
-package lab;
+package App;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -25,7 +24,7 @@ public class App extends Application {
 
             primaryStage.setScene(scene);
             primaryStage.resizableProperty().set(false);
-            primaryStage.setTitle("Logging screen");
+            primaryStage.setTitle("Login");
             primaryStage.show();
             AppController controller = loader.getController();
             controller.startApp();

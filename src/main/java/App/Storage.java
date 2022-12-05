@@ -1,4 +1,4 @@
-package lab;
+package App;
 
 public class Storage {
 }
