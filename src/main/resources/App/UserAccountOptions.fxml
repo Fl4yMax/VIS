@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.AppController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
@@ -17,7 +16,7 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#chooseProduct" prefHeight="45.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Vytvořit">
+            <Button mnemonicParsing="false" onAction="#createProfile" prefHeight="45.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Vytvořit">
                <font>
                   <Font size="18.0" />
                </font>
@@ -25,7 +24,7 @@
                   <Insets top="40.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#chooseProduct" prefHeight="45.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Odebrat">
+            <Button mnemonicParsing="false" onAction="#deleteProfile" prefHeight="45.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Odebrat">
                <font>
                   <Font size="18.0" />
                </font>

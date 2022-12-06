@@ -82,17 +82,6 @@
          </children>
       </HBox>
    </center>
-   <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label style="-fx-font-weight: bold;" text="Změna údajů uživatele">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
-   </top>
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -104,7 +93,7 @@
                   <Insets right="30.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#updateProfile" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Uložit">
+            <Button fx:id="save" mnemonicParsing="false" onAction="#saveUpdateProfile" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Uložit">
                <font>
                   <Font size="18.0" />
                </font>
@@ -115,4 +104,23 @@
          </children>
       </HBox>
    </bottom>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Změna údajů uživatele">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="success" textFill="RED">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>

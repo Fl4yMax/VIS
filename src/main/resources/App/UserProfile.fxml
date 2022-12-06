@@ -61,7 +61,7 @@
                   </Label>
                </children>
             </VBox>
-            <VBox alignment="TOP_RIGHT" prefHeight="212.0" prefWidth="296.0">
+            <VBox alignment="TOP_RIGHT" prefHeight="212.0" prefWidth="337.0">
                <children>
                   <Label fx:id="firstName" style="-fx-font-weight: bold;" text="NULL">
                      <font>
@@ -135,7 +135,7 @@
                   <Insets right="30.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#setProfile" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Upravit údaje">
+            <Button mnemonicParsing="false" onAction="#updateProfile" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 15%; -fx-border-radius: 5%; -fx-border-color: black; -fx-border-width: 3;" text="Upravit údaje">
                <font>
                   <Font size="18.0" />
                </font>

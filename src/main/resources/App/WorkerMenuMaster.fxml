@@ -22,7 +22,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="194.0" layoutY="218.0" mnemonicParsing="false" onAction="#workersOverview" prefHeight="22.0" prefWidth="213.0" style="-fx-background-color: #EB9830; -fx-border-color: black; -fx-border-width: 2px; -fx-border-radius: 5%; -fx-background-radius: 10%;" text="Zaměstnanci">
+      <Button layoutX="194.0" layoutY="218.0" mnemonicParsing="false" onAction="#workersProductOverview" prefHeight="22.0" prefWidth="213.0" style="-fx-background-color: #EB9830; -fx-border-color: black; -fx-border-width: 2px; -fx-border-radius: 5%; -fx-background-radius: 10%;" text="Zaměstnanci">
          <font>
             <Font size="18.0" />
          </font>
