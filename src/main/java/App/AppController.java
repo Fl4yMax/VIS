@@ -111,7 +111,14 @@ public class AppController {
     @FXML
     private TextField deleteUser;
 
-
+    @FXML
+    private Label activeProductName;
+    @FXML
+    private Label activeProductId;
+    @FXML
+    private Label activeProductCount;
+    @FXML
+    private Label activeProductPrice;
 
     public AppController()
     {
@@ -131,11 +138,16 @@ public class AppController {
         loaders.add(new FXMLLoader(this.getClass().getResource("CreateUser.fxml")));              //11
         loaders.add(new FXMLLoader(this.getClass().getResource("WorkerSelectProduct.fxml")));     //12
         loaders.add(new FXMLLoader(this.getClass().getResource("DeleteUser.fxml")));              //13
+        loaders.add(new FXMLLoader(this.getClass().getResource("WorkerProduct.fxml")));           //14
     }
     public void startApp()
     {
         failedAuth.setText("");
         this.appCore = new AppCore();
+        if(!appCore.getLoadInformation())
+        {
+            load();
+        }
     }
 
     @FXML
@@ -302,10 +314,6 @@ public class AppController {
             stage.resizableProperty().set(true);
             stage.setTitle("MainMenu");
             stage.show();
-            if(!appCore.getLoadInformation())
-            {
-                load();
-            }
         }
         else
         {
@@ -517,6 +525,30 @@ public class AppController {
         appCore.updateWorker(workersView.get(currNum - 1));
     }
 
+    @FXML
+    private void workerProduct(ActionEvent event) throws IOException
+    {
+        Pane root = loaders.get(14).load();
+
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) (((Node)event.getSource()).getScene().getWindow());
+
+        stage.setScene(scene);
+        stage.resizableProperty().set(true);
+        stage.setTitle("Worker product selection");
+        stage.show();
+
+        AppController controller = loaders.get(14).getController();
+
+        Product product = appCore.findProduct(appCore.getLoggedIn().getProductId());
+
+        controller.activeProductId.setText("" + product.getId());
+        controller.activeProductName.setText(product.getName());
+        controller.activeProductCount.setText("" + product.getCount());
+        controller.activeProductPrice.setText("" + product.getPrice());
+    }
+
     public void save()
     {
         List<Worker> workers = appCore.getWorkers();
@@ -524,7 +556,6 @@ public class AppController {
         try(PrintWriter pw = new PrintWriter(new FileWriter(FILE_NAME_WORKERS))) {
             for(Worker w : workers)
             {
-                //System.out.println(w.getProductId() + " : " + w.getWorkspaceId());
                 pw.printf("%d;%s;%s;%s;%s;%s;%s;%d;%s;%s;%d;%d\n", w.getId(), w.getFirstName(), w.getLastName(), w.getRank(), w.getPhone_number(), w.getEmail(), w.getAddress(), w.getPostalCode(), w.getPassword(), w.getLogin(), w.getProductId(), w.getWorkspaceId());
             }
         } catch (IOException e) {

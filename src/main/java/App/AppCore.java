@@ -23,7 +23,6 @@ public class AppCore {
     public AppCore()
     {
         super();
-        //worker = new Worker("Admin", "Admin", "skladnik");
         dbWorker = new GatewayWorker();
         dbProduct = new GatewayProduct();
         workers = dbWorker.loadAllWorkers();
